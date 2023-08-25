@@ -1,0 +1,9 @@
+flask
+Flask-SQLAlchemy
+flask_smorest
+marshmallow
+passlib
+flask_jwt_extended
+python-dotenv
+validators
+shortuuid

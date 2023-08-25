@@ -1,0 +1,230 @@
+@import url(https://fonts.googleapis.com/css?family=Asap:400,700|Lato:400,700,900|Source+Sans+Pro:400,700&display=swap);
+
+/* Resetting default margin and padding */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    background: #f9f9f9;
+    font: 14px 'Asap', arial;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+    color: #505050;
+    margin-bottom: 10px;
+}
+
+p {
+    font: 17px 'Source Sans Pro', arial;
+    color: #202020;
+    line-height: 1.5;
+    text-align: left;
+    padding-left: 2px;
+}
+
+a {
+    color: #006cff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 1px 4px #ccc;
+    padding: 0;
+}
+
+header #logo {
+    padding: 20px 20px 20px;
+}
+
+header a.logo {
+    font: 900 49px 'Asap', arial;
+    color: #0186da;
+    letter-spacing: -1px;
+    text-shadow: 0 2px 2px #ddd;
+    word-wrap: break-word;
+}
+
+header a.logo:hover {
+    text-decoration: none;
+}
+
+/* Navigation styles */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 20px;
+    background: #333;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 16px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+}
+
+/* Main content styles */
+main {
+    display: block;
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1000px;
+}
+
+/* URL box styles */
+section#urlbox {
+    margin: 25px auto 20px auto;
+    max-width: 758px;
+    box-shadow: 0 1px 4px #ccc;
+    border-radius: 2px;
+    padding: 10px 30px 5px;
+    background: #fff;
+    text-align: center;
+}
+
+section#urlbox h1 {
+    margin: 10px auto 30px auto;
+}
+
+section .boxtextcenterdesc {
+    margin: 10px auto 30px;
+    text-align: center;
+    max-width: 620px;
+}
+
+section .boxtextcenter {
+    margin: 10px auto 20px;
+    text-align: center;
+    max-width: 620px;
+}
+
+/* Email box styles */
+section#emailbox {
+    margin: 0 auto 20px auto;
+    max-width: 758px;
+    box-shadow: 0 1px 4px #ccc;
+    border-radius: 2px;
+    padding: 10px 30px 5px;
+    background: #fff;
+    text-align: center;
+}
+
+section#emailbox h2 {
+    margin: 15px auto 20px auto;
+}
+
+/* Form styles */
+#formurl {
+    display: table;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#formurl input[type="text"] {
+    display: table-cell;
+    width: 100%;
+    height: 56px;
+    padding: 10px 16px;
+    font: 17px 'Lato', arial;
+    color: #000;
+    background: #fff;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    box-sizing: border-box;
+}
+
+#formurl #formbutton {
+    display: table-cell;
+    width: 1%;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+#formurl input[type="submit"] {
+    height: 56px;
+    padding: 10px 16px;
+    font: bold 17px 'Lato', arial;
+    color: #fff;
+    background-color: #2c87c5;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    white-space: nowrap;
+    border: 0;
+    border-radius: 3px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: -1px;
+}
+
+.footer {
+    margin-top: 100px;
+    color: #888;
+    text-align: center;
+}
+
+/* Shortened URL box styles */
+#shortenedUrl {
+    margin-top: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+    background: #fffefe;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-align: left;
+    background-color: #fff;
+    padding: 10px 16px;
+    font: 30px 'Lato', arial;
+    position: relative;
+}
+
+#shortenedUrl button#copyButton {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    border-radius: 3px;
+    width: 126px;
+    padding: 18px 16px;
+    font: bold 17px 'Lato', arial;
+    color: #fff;
+    background-color: #2c87c5;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    white-space: nowrap;
+    border: 0;
+    border-radius: 3px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: -1px;
+}
+
+#shortenedUrl a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#shortenedUrl a:hover {
+    text-decoration: underline;
+}
+
+.dtd {
+    margin-bottom: 20px;
+}
+

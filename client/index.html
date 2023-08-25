@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>ShortURL - URL Shortener</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="logo">
+            <a class="logo" href="/">ShortURL</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="urlbox">
+            <h1>Shorten Your URL</h1>
+
+            <form id="shortenForm" action="/url" method="post">
+                <div id="formurl">
+                    <input type="text" name="url" placeholder="Enter the link here">
+                    <div id="formbutton">
+                        <input type="submit" value="Shorten URL">
+                    </div>
+                </div>
+            </form>
+
+            <div id="shortenedUrl" style="display: none;">
+                <button id="copyButton">Copy</button>
+                <a id="shortUrlLink" href="#" target="_blank" class="copy-link">Click to Copy</a>
+            </div>
+            <p class="boxtextcenter">
+                ShortURL is a free tool to shorten URLs and generate short links. URL shortener allows you to create a shortened link, making it easy to share.
+            </p>
+        </section>
+
+        <section id="emailbox">
+            <div class="dtd">
+                <h2>Want More? Try Premium Features!</h2>
+                <p class="boxtextcenterdesc">Custom short links, powerful dashboard, detailed analytics, API, UTM builder, QR codes, browser extension, 50+ app integrations, and support.</p>
+                <a href="#" class="colorbutton">Sign Up</a>
+                <span class="colorbutton">or</span>
+                <a href="#" class="colorbutton">Sign In</a>
+            </div>
+        </section>
+
+        <div class="footer">
+            Copyright &copy; 2023 &mdash; Tato Soselia
+        </div>
+    </main>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+</html>
