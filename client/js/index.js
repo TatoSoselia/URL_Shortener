@@ -8,16 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to shorten a URL relative to the hosting URL
     function shorten_url(url) {
         // Get the hosting URL (base URL)
-        var baseURL = window.location.origin;
-
-        // Check if the input URL starts with the baseURL
-        if (url.startsWith(baseURL)) {
-            // If it does, return the relative path
-            return url.substring(baseURL.length);
-        } else {
-            // If not, return the input URL as is
-            return url;
-        }
+        var baseURL = window.location.origin
+        return baseURL+"/"+url
     }
 
     shortenForm.addEventListener('submit', function(event) {
