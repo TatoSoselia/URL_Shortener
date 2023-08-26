@@ -189,7 +189,7 @@ section#emailbox h2 {
     text-align: left;
     background-color: #fff;
     padding: 10px 16px;
-    font: 30px 'Lato', arial;
+    font: 15px 'Lato', arial;
     position: relative;
 }
 
@@ -200,7 +200,7 @@ section#emailbox h2 {
     transform: translateY(-50%);
     border-radius: 3px;
     width: 126px;
-    padding: 18px 16px;
+    padding: 9.5px 16px;
     font: bold 17px 'Lato', arial;
     color: #fff;
     background-color: #2c87c5;
