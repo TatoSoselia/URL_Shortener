@@ -3,7 +3,7 @@ from flask.views import MethodView
 from server.schemas import PlainUrlSchema
 from sqlalchemy.exc import SQLAlchemyError
 from server.models import UrlModel
-from flask import render_template
+from flask import render_template, redirect
 import validators
 import shortuuid
 from server.db import db
@@ -38,3 +38,10 @@ class UrlList(MethodView):
 
         return {"short_url":short_url}, 201
 
+
+@blp.route("/<string:short_url>")
+class get_url(MethodView):
+    def get(self, short_url):
+        url = UrlModel.query.get_or_404(short_url)
+        db.session.commit()
+        return redirect(url.url)
