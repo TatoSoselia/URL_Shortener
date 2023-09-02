@@ -3,19 +3,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const shortenedUrlDiv = document.getElementById('shortenedUrl');
     const shortUrlLink = document.getElementById('shortUrlLink');
     const copyButton = document.getElementById('copyButton');
-    const urlInput = document.querySelector('input[name="url"]'); // Get the input element
+    const urlInput = document.querySelector('input[name="url"]');
+    const errorMessageDiv = document.getElementById('errorMessage');
+    const errorMessage = document.getElementById('error-message');
 
     // Function to shorten a URL relative to the hosting URL
     function shorten_url(url) {
-        // Get the hosting URL (base URL)
-        var baseURL = window.location.origin
-        return baseURL+"/"+url
+        var baseURL = window.location.origin;
+        return baseURL + "/" + url;
     }
 
     shortenForm.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        const urlValue = urlInput.value; // Store the input value
+        const urlValue = urlInput.value;
 
         const requestData = {
             url: urlValue
@@ -31,10 +32,10 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.json())
         .then(data => {
             if (data.short_url) {
-                const shortenedURL = shorten_url(data.short_url); // Shorten the URL
+                const shortenedURL = shorten_url(data.short_url);
 
-                shortUrlLink.href = shortenedURL; // Set the shortened URL as the link href
-                shortUrlLink.textContent = shortenedURL; // Display the shortened URL
+                shortUrlLink.href = shortenedURL;
+                shortUrlLink.textContent = shortenedURL;
                 shortenedUrlDiv.style.display = 'block';
 
                 copyButton.addEventListener('click', function() {
@@ -47,12 +48,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     copyButton.textContent = 'Copied!';
 
-                    // Reset after a few seconds (e.g., 3 seconds)
                     setTimeout(function() {
                         copyButton.textContent = 'Copy';
-                        urlInput.value = ''; // Clear the input field again
-                    }, 2000); // 2000 milliseconds = 2 seconds
+                        urlInput.value = '';
+                    }, 2000);
                 });
+            } else if (data.code === 400 && data.message === "Invalid URL.") {
+                errorMessage.textContent = data.message;
+                errorMessageDiv.style.display = 'block';
+
+                setTimeout(function() {
+                    errorMessageDiv.style.display = 'none';
+                    urlInput.value = '';
+
+                }, 2000); // 5000 milliseconds = 5 seconds
             }
         })
         .catch(error => {

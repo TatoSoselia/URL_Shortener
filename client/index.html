@@ -23,6 +23,10 @@
         <section id="urlbox">
             <h1>Shorten Your URL</h1>
 
+            <div id="errorMessage" style="display: none;">
+                <p id="error-message"></p>
+            </div>
+
             <form id="shortenForm" action="/url" method="post">
                 <div id="formurl">
                     <input type="text" name="url" placeholder="Enter the link here">
@@ -36,18 +40,20 @@
                 <button id="copyButton">Copy</button>
                 <a id="shortUrlLink" href="#" target="_blank" class="copy-link">Click to Copy</a>
             </div>
+
             <p class="boxtextcenter">
                 ShortURL is a no-cost utility for condensing URLs and producing concise links. This URL shortening service enables you to craft compact links, simplifying the process of sharing them.
             </p>
         </section>
 
+
         <section id="emailbox">
             <div class="dtd">
                 <h2>Try Premium Features!</h2>
                 <p class="boxtextcenterdesc">Custom short links, powerful dashboard, detailed analytics, API, and support.</p>
-                <a href="#" class="colorbutton">Sign Up</a>
+                <a href="client\404.html" class="colorbutton">Sign Up</a>
                 <span class="colorbutton">or</span>
-                <a href="#" class="colorbutton">Sign In</a>
+                <a href="client\404.html" class="colorbutton">Sign In</a>
             </div>
         </section>
 
